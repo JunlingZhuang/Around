@@ -1,0 +1,10 @@
+elasticsearch:
+  address: "http://34.23.121.24:9200"
+  username: "Junling"
+  password: "82465zjy"
+
+gcs:
+  bucket: "around-junling-bucket"
+
+token:
+  secret: "secret"
