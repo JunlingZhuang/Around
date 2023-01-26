@@ -62,6 +62,7 @@ function Home(props) {
        .filter((item) => item.type === "image")
        .map((image) => {
          return {
+           postId: image.id,
            src: image.url,
            user: image.user,
            caption: image.message,
@@ -73,20 +74,8 @@ function Home(props) {
 
      return <PhotoGallery images={imageArr} />;
    } else if (type === "video") {
-     return (
-       <Row gutter={32}>
-         {posts
-           .filter((post) => post.type === "video")
-           .map((post) => (
-             <Col span={8} key={post.url}>
-               <video src={post.url} controls={true} className="video-block" />
-               <p>
-                 {post.user}: {post.message}
-               </p>
-             </Col>
-           ))}
-       </Row>
-     );
+     console.log("video -> ", posts);
+     return "videos";
    }
  };
 
