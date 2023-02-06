@@ -6,8 +6,9 @@ import (
 
 	"around/constants"
 
+	"around/util"
+
 	"github.com/olivere/elastic/v7"
-    "around/util"
 )
 
 var (
@@ -80,6 +81,8 @@ func (backend *ElasticsearchBackend) ReadFromES(query elastic.Query, index strin
         Index(index).
         Query(query).
         Pretty(true).
+        //define the maximun number of posts
+        From(0).Size(1000).  
         Do(context.Background())
     if err != nil {
         return nil, err
