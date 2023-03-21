@@ -1,5 +1,5 @@
 export const TOKEN_KEY = "token";
-export const BASE_URL = "https://prime-victory-366115.ue.r.appspot.com";
+export const BASE_URL = "https://prime-victory-366115.ue.r.appspot.comçç";
 // http://34.23.121.24:8080"
 // https://prime-victory-366115.ue.r.appspot.com
 
